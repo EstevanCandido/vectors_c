@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define N 	10
+#define N 	5
 /* ===================================================================== */
 /* --- Macros --- */
 
@@ -19,9 +19,6 @@ main ()
 	int i;
 	
 	printf("Defina o valor do seu aporte R$: ");
-	scanf("%f", &N);
-	
-	printf("Defina o valor do seu aporte R$: ");
 	scanf("%f", &aporte);
 	
 	for(i=0;i<N;i++)
@@ -29,14 +26,19 @@ main ()
 		printf("Digite os valores das acoes e suas qtd respectivamente (R$): ");
 		scanf("%f %d", &ValorAcao[i], &qtd[i] );
 		soma+=(ValorAcao[i]*qtd[i]);
-	}
+	}//end for
 	
 	if(soma>aporte)
 	{
 		printf("Valor que se deseja aplicar = %.2f\n", soma);
 		printf("Seu aporte e menor que o valor que se deseja aplicar! Aumente seu aporte em %.2f!\n", soma-aporte);
-	}
-	
+	}//end if
+	else
+	{
+		printf("Investimnto efetuado!\n");
+	}//end else
+
+
 	
 	system("PAUSE");
 	return 0;
